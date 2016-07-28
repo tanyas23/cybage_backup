@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+D:\ALM project\alm\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2741276904.index
+1653287366.index
+1074504330.index
+726489265.index
+2281012002.index
+440006559.index

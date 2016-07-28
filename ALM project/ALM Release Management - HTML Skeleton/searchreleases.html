@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Releases</title>
+<link href="css/style.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+<table>
+	<thead id="heading">
+		<tr >
+			<td>Action</td>
+			<td>Title</td>
+			<td>Description</td>
+			<td>Items</td>
+			<td>Manager</td>
+			<td>Type</td>
+			<td>To</td>
+			<td>Status</td>
+			<td>Start Date</td>
+			<td>Version</td>
+		</tr>
+	</thead>
+	<tbody> 		
+		
+			<tr>
+				<td>
+					<form action="delete Page" method="post">
+						<p onclick = "submit">delete</p>
+						<input type="hidden"  name="whatToDelete" value = "titleOfRow">
+					</form>
+				</td>				
+				<td>{release.title}</td>
+				<td>{release.description}</td>
+				<td>{release.item}</td>
+				<td>{release.manager}</td>
+				<td>{release.type[}</td>
+				<td>{release.too}</td>
+				<td>{release.status}</td>
+				<td>{release.startDate}</td>
+				<td>{release..version}</td>
+			</tr>
+		
+	</tbody>
+</table>
+<form>
+	<input type="text" name ="SearchBox" placeholder="Search Release"></input>
+	<input type= "submit" name="Submit"></input>
+</form>
+</body>
+</html>

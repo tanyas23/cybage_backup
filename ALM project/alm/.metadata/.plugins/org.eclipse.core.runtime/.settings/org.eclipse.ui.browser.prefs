@@ -1,0 +1,5 @@
+#Fri Dec 12 14:42:20 IST 2014
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="0">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n</web-browsers>
+browser-choice=1
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/ALM-ReleaseManagement/releasemanagement/homepage|*|http\://localhost\:8080/ALM-ReleaseManagement/index.jsp|*|http\://localhost\:8080/BookLibrary/index.html|*|http\://localhost\:8080/BookLibrary/AdminLogin.html|*|http\://localhost\:8080/BookLibrary/Booksearch|*|http\://localhost\:8080/BookLibrary/UserLogin.html|*|http\://localhost\:8080/BookLibrary/UserVerification?var1\=tanya&var2\=abc|*|http\://localhost\:8080/ALM-ReleaseManagement/|*|

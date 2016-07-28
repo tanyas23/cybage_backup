@@ -1,0 +1,5 @@
+127.0.0.1 - - [29/Sep/2014:16:34:05 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [29/Sep/2014:16:34:07 +0530] "GET /ALM-ReleaseManagement/index.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [29/Sep/2014:16:34:07 +0530] "GET /ALM-ReleaseManagement/releasemanagement/homepage HTTP/1.1" 500 8742
+0:0:0:0:0:0:0:1 - - [29/Sep/2014:16:41:00 +0530] "GET /ALM-ReleaseManagement/index.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [29/Sep/2014:16:41:00 +0530] "GET /ALM-ReleaseManagement/releasemanagement/homepage HTTP/1.1" 500 8742

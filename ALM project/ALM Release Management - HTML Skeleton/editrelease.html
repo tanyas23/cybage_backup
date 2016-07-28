@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Release</title>
+<link href="css/style.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form >
+	<span>Edit Release</span>
+	<input type="text" name="title" maxlength="20" placeholder="Title" required>
+	<input type="text" name="description"  maxlength="100" placeholder="Description"  required>
+	<input type="date" name="startdate" placeholder="Start Date"  required>
+	<input type="date" name="planneddate" placeholder="Planned Date"  required>
+	<input type="date" name="releasedate" placeholder="Release Date"  required>
+	
+	<select name="type">
+		<option selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select>
+	
+	<select name="to">
+		<option selected>To</option>
+		<option>Dev Test</option>
+		<option>QA Test</option>
+		<option>Stage</option>
+		<option>Production</option>
+		
+	</select>
+	<input type="text" name="items" placeholder="Items" maxlength="25" required>
+	<select name="status">
+		<option selected>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select>
+	<select name="to">	
+		<option selected>Manager</option>	
+		<option>Dev PM</option>
+		<option>Release Manager</option>
+	</select>
+	<input type="text" name="version" placeholder="Version" maxlength="25" required><br>
+	<button type="reset" style="display: inline-block;">Reset</button> 
+	<button type="submit" style="display: inline-block;">Submit</button>
+</form>
+</body>
+</html>

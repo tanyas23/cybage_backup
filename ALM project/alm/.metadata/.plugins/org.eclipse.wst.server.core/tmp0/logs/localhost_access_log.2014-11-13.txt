@@ -1,0 +1,6 @@
+127.0.0.1 - - [13/Nov/2014:15:43:23 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [13/Nov/2014:15:43:24 +0530] "GET /BookLibrary/index.html HTTP/1.1" 200 447
+0:0:0:0:0:0:0:1 - - [13/Nov/2014:15:43:25 +0530] "GET /BookLibrary/UserLogin.html HTTP/1.1" 200 434
+0:0:0:0:0:0:0:1 - - [13/Nov/2014:15:44:21 +0530] "GET /BookLibrary/UserVerification?var1=tanya&var2=abc HTTP/1.1" 500 1363
+0:0:0:0:0:0:0:1 - - [13/Nov/2014:15:44:34 +0530] "GET /BookLibrary/AdminLogin.html HTTP/1.1" 200 446
+0:0:0:0:0:0:0:1 - - [13/Nov/2014:15:44:38 +0530] "GET /BookLibrary/Booksearch HTTP/1.1" 200 117

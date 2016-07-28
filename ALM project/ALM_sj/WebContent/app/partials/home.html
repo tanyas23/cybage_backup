@@ -1,0 +1,65 @@
+<div class="row span12 alert alert-danger" ng-show="isException">
+  <a class="close" data-dismiss="alert">×</a>
+  <strong>Failure! </strong>{{exception.message}}
+</div>
+
+<div class="span12">
+  <div class="row" style="margin-top: 2%; position: relative;">
+  	<div class="row">
+  		<div class="span5 offset5">
+  			<h2>Select Portfolios</h2>
+  		</div>
+  	</div>
+  		<div class="span5 offset5 select-append">
+  			<select name="portfolios" ng-model="selectedPortfolio">
+  				<option value="">All Portfolios</option>
+         		<option ng-repeat="portfolio in portfolios" value="{{portfolio.pfid}}">{{portfolio.name}}</option>
+         	</select>
+  		</div> 
+  </div>
+  	
+  	<div class="span9 offset2 input-append" style="margin-top: 7%;">
+	  	<div class="row">
+	  		<input type="text" class="input-lg span8" placeholder="Search Projects" ng-model="search.name"/>
+	  		<span class="btn"><i class="icon-search"></i></span>
+		</div> 
+	</div>
+	
+    <div class="span12">
+      <table class="table table-bordered table-hover">
+      	<thead>
+      		<tr>
+      			<th class="span10"><span ng-click="sortTable('name')">Project Name</span></th>
+      			<th colspan="3" class="span3">Actions</th>
+      		</tr>
+      	</thead>
+		<tbody ng-repeat='portfolio in portfolios' >
+			<tr ng-repeat='project in portfolio.projects | filter:search:strict | filter: fromPortfolioFilter |  orderBy: sortOn' ng-class-odd="'info'" ng-class-even="'warning'">
+       			<td><a href="#/project/{{project.pid}}/show">{{project.name}}</a></td>
+       			<td><a href="#/project/{{project.pid}}/event">Events</a></td>
+       			<td><a href="#/project/{{project.pid}}/edit">Edit</a></td>
+       			<td><a ng-click="delProject(project.pid)">Delete</a></td>
+       		</tr>
+		</tbody>
+      </table>
+  </div>
+</div>
+  
+    <div id="confirmModal" class="modal hide fade" style="display: none;">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal">×</a>
+            </div>
+            <div class="modal-body">
+              <h4>Confirmation.....</h4>
+              <p>Are you Really Want to delete this.....</p>		        
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn btn-success" ng-click="deleteProject()">Yes</a>
+              <a href="#" class="btn" data-dismiss="modal" ng-click="reinit()">No</a>
+            </div>
+  </div>
+<style type="text/css">
+.table th {
+   text-align: center;   
+}
+</style>

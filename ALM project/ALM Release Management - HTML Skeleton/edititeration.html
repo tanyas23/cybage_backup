@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Iteration</title>
+<link href="css/style.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form >
+	<span>Edit Iteration</span>
+	<input type="text" name="title" maxlength="20" placeholder="Title" required>
+	<input type="text" name="description"  maxlength="100" placeholder="Description"  required>
+	<input type="date" name="startdate" placeholder="Start Date"  required>
+	<input type="date" name="releasedate" placeholder="Release Date"  required>
+	<select name="type">
+		<option selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select>
+	<input type="text" name="items" placeholder="Items" maxlength="25" required>
+	
+	<select name="status">
+		<option>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select><br>
+	<button type="reset" style="display: inline-block;">Reset</button> 
+	<button type="submit" style="display: inline-block;">Submit</button>
+</form>
+</body>
+</html>

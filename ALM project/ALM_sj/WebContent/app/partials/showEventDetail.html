@@ -1,0 +1,38 @@
+<div class="row span12 alert alert-danger" ng-show="isException">
+  <a class="close" data-dismiss="alert">×</a>
+  <strong>Failure! </strong>{{exception.message}}
+</div>
+
+  <div style="margin-top: 5%; margin-left: 26%; position: relative;">
+  		<div>
+  			<h4>New Project Event</h4>
+  		</div>
+  </div>
+
+<form name="form" class="form-horizontal" ng-controller="addProjectEventCtrl" style="margin-top: 1%;" novalidate ng-submit="submitProjectEvent()">
+
+<div class="control-group error">
+			<label class="control-label" for="inputName">title</label>
+			<div class="controls">
+				<input type="text" name="inputName" id="inputName" class="span4" ng-model="projectEvent.title" placeholder="Enter title">
+				<span class="help-inline" ng-show="form.inputName.$error.required">Required!</span>
+			</div>
+</div>
+
+<div class="control-group">
+		<label class="control-label" for="appendedPrependedInput">event Type</label>
+		<div class="controls">
+		<div class="input-append">
+		<input type="text" name="appendedPrependedInput" id="appendedPrependedInput" class="span4" ng-model="projectEvent.eventType" placeholder="Enter Event Type">
+		</div>
+		<span class="error" ng-show="form.appendedPrependedInput.$error.required">
+		   Required!</span>
+</div></div>
+
+<div class="control-group">
+	<label class="control-label" for="textareaDescription">Event Description</label>
+	<div class="controls">
+		<textarea id ="textareaDescription" class="span4" rows="4" cols="50" ng-model="projectEvent.eventDescription" placeholder="Enter Event description"></textarea>
+	</div>
+</div>
+</form>

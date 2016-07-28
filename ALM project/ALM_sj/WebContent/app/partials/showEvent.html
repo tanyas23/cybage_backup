@@ -1,0 +1,37 @@
+	<div class="row span12 alert alert-danger" ng-show="isException">
+	  <a class="close" data-dismiss="alert">×</a>
+	  <strong>Failure! </strong>{{exception.message}}
+	</div>
+
+  		<div class="span5 offset5 select-append">
+  			<h3> Events</h3>
+  		</div> 
+  	
+  	<div class="span8 offset2 input-append" style="margin-top: 1%;">
+	  	<div class="row">
+	  		<input type="text" class="input-lg span8" placeholder="Search Events" ng-model="search.title"/>
+	  		<span class="btn"><i class="icon-search"></i></span>
+		</div> 
+	</div>
+	
+    <div class="span12">
+      <table class="table table-bordered table-hover">
+      	<thead>
+      		<tr>
+      			<th class="span10"><span ng-click="sortTable('name')">Event Name</span></th>
+      			<th colspan="3" class="span4">Actions</th>
+      		</tr>
+      	</thead>
+		<tbody >
+			<tr ng-repeat='projectEvent in projectEvents | filter:search:strict |  orderBy: sortOn' ng-class-odd="'info'" ng-class-even="'warning'">
+       			<td>{{projectEvent.title}}</td>
+       			<td>{{projectEvent.id}}</td>
+       		</tr>
+		</tbody>
+      </table>
+      </div>
+      <div class="span2 offset10 select-append">
+  			<a href="#/project/{{projectId}}/event/addProjectEvent"><h4>Add Events</h4></a>
+  		</div>
+ 
+      

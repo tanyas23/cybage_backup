@@ -1,0 +1,55 @@
+<!-- container-newRelease Start---->
+  <script>
+  $(function() {
+    $( "#ReleaseStartDate" ).datepicker();
+    $( "#ReleasePlannedDate" ).datepicker();
+    $( "#ReleaseReleaseDate" ).datepicker();
+  });
+  </script>
+<div class="container-newrelease">
+<form id="releaseForm">
+	
+	<input type="text" class="form-control" name="title" ng-model="ReleaseTitle" maxlength="20" placeholder="Title" required>
+	<input type="text" class="form-control" name="description"  ng-model="ReleaseDescription" maxlength="100" placeholder="Description"  required>
+	<input type="text" class="form-control" id="ReleaseStartDate" name="startdate" ng-model="ReleaseStartDate" placeholder="Start Date"  >
+	<input type="text" class="form-control" id="ReleasePlannedDate" name="planneddate"  ng-model="ReleasePlannedDate" placeholder="Planned Date"  >
+	<input type="text" class="form-control" id="ReleasePlannedDate" name="releasedate"  ng-model="ReleaseReleaseDate" placeholder="Release Date"  >
+	
+	<select name="type" class=" btn btn-default form-control" ng-model="ReleaseType">
+		<option selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select><br>
+	
+	<select name="to" class=" btn btn-default form-control" ng-model="ReleaseTo">
+		<option selected>To</option>
+		<option>Dev Test</option>
+		<option>QA Test</option>
+		<option>Stage</option>
+		<option>Production</option>
+		
+	</select>
+	<input type="text" class="form-control" name="items" ng-model="ReleaseItems" placeholder="Items" maxlength="25" required>
+	<select name="status" class=" btn btn-default form-control" ng-model="ReleaseStatus">
+		<option selected>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select><br>
+	<select name="manager"  class=" btn btn-default form-control" ng-model="ReleaseManager">	
+		<option selected>Manager</option>	
+		<option>Dev PM</option>
+		<option>Release Manager</option>
+	</select>
+	<input type="text" class="form-control" name="version" ng-model="ReleaseVersion" placeholder="Version" maxlength="25" ><br>
+	<button type="reset" class="btn-warning" ng-click="resetRelease()" style="display: inline-block;">
+	<span class="glyphicon glyphicon-repeat"></span> Reset
+	</button>  	
+	<button type="submit" class="btn-success" onclick="alphanumeric()">
+	<span class="glyphicon glyphicon-ok"></span> Submit
+	</button>
+</form>
+</div><!-- container-newRelease END---->

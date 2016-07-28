@@ -1,0 +1,38 @@
+<!-- container-editIteration Start-->
+  <script>
+  $(function() {
+    $( "#IterationStartDate" ).datepicker();
+    $( "#IterationEndDate" ).datepicker();
+  });
+  </script>
+<div class="container-editIteration">
+<form id="iterationForm" name="form1" method="post" action="/ALM-ReleaseManagment/releasemanagement/newiterationsubmit">
+<input type="text" id="IterationTitle" class="form-control" name="title" ng-model="IterationTitle" placeholder="Title" required>
+<input type="text" 	class="form-control" name="description" ng-model="IterationDescription" maxlength="100" placeholder="Description" required >
+	<input type="text" class="form-control" id="IterationStartDate" name="startdate" ng-model="IterationStartDate" placeholder="Start Date"  >
+	<input type="text" class="form-control" id="IterationEndDate" name="enddate" ng-model="IterationEndDate" placeholder="End Date"  >
+	<select name="status"  class=" btn btn-default form-control" ng-model="IterationStatus">
+		<option>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select>
+	<input type="text" class="form-control" ng-model="IterationItems" name="items" placeholder="Items" maxlength="25" required >
+	<select name="type"  class=" btn btn-default form-control" ng-model="IterationType">
+		<option selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select><br>
+<button type="reset" class="btn-warning">
+<span class="glyphicon glyphicon-repeat"></span> Reset
+</button> 
+
+<button type="submit" class="btn-success" onclick="alphanumeric()">
+<span class="glyphicon glyphicon-ok"></span> Submit
+</button>
+</form>
+{{message}}
+</div><!-- container-editIteration END-->	
